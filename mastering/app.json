@@ -1,0 +1,13 @@
+{
+    "name": "Packt",
+
+    "require":[
+        'Packt.view.Login'
+    ],
+
+    "views": [
+        'Login'
+    ],
+
+    "id": "8fda1b2e-94bb-4111-b39d-04242fee6171"
+}
