@@ -1,11 +1,18 @@
 Ext.application({
     name: 'Packt',
-    requires: ['Packt.view.Login',
-    ],
-    views: [
-       'Login'
+
+    requires: [
+        'Packt.view.Login',
+        'Ext.form.Panel',
+        'Ext.window.Window'
     ],
 
+    views: [
+        'Packt.view.Login'
+    ],
+
+    splashscreen: {},
+/*
     init: function() {
         splashscreen = Ext.getBody().mask('Loading applicatio', 'splashscreen');
         splashscreen.addCls('splashscreen');
@@ -13,33 +20,31 @@ Ext.application({
             cls: 'x-splash-icon'
         });
     },
-
+*/
     launch: function() {
+/*
         var task = new Ext.util.DelayedTask(function() {
 
             splashscreen.fadeOut({
-                duration: 1000,
+                duration: 2000,
                 remove: true
             });
             
             splashscreen.next().fadeOut({
-                duration: 1000,
+                duration: 2000,
                 remove: true,
                 listeners: {
                    afteranimate: function(el, startTime, eOpts) {
+                      console.log('Should start login widget');
                       Ext.widget('login');
                    }
                 }
             })
-
-            
-            console.log('its running');
         });
 
         task.delay(2000);
-    },
-
-    extend: 'Packt.Application',
-    
-    autoCreateViewport: true
+*/
+        console.log('show login page');
+        Ext.widget('login');
+    }
 });

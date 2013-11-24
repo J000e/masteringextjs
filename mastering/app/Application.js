@@ -3,8 +3,20 @@ Ext.define('Packt.Application', {
 
     extend: 'Ext.app.Application',
 
+    requires: [
+        'Ext.form.Panel',
+        'Ext.window.Window',
+        'Ext.menu.Menu',
+        'Ext.form.Label',
+        'Ext.data.proxy.Ajax',
+        'Ext.form.FieldSet',
+        'Ext.form.field.Hidden',
+        'Ext.form.field.ComboBox',
+        'Ext.form.field.File'
+    ],
+
     views: [
-        // TODO: add views here
+        'Login'
     ],
 
     controllers: [
